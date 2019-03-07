@@ -1,0 +1,40 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypical.Software.Trestle", "Trestle\Archetypical.Software.Trestle.csproj", "{B8F94115-113E-42C1-BEB7-72B26574BD0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypical.Software.Trestle.iOS", "Trestle.iOS\Archetypical.Software.Trestle.iOS.csproj", "{3785CBAF-5925-433F-87D0-A450D887361D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypical.Software.Trestle.Android", "Trestle.Android\Archetypical.Software.Trestle.Android.csproj", "{5583B166-1F75-4A3B-9275-07C3CED5E836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{4DE759B6-01FC-42CF-B4AD-24B3B6CB9FA0}"
+	ProjectSection(SolutionItems) = preProject
+		Archetypical.Software.Trestle.nuspec = Archetypical.Software.Trestle.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypical.Software.Trestle.Abstractions", "Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj", "{398C673D-9F9C-42DB-899A-86C38DA1235F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F94115-113E-42C1-BEB7-72B26574BD0D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8F94115-113E-42C1-BEB7-72B26574BD0D}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8F94115-113E-42C1-BEB7-72B26574BD0D}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8F94115-113E-42C1-BEB7-72B26574BD0D}.Release|x86.Build.0 = Release|Any CPU
+		{3785CBAF-5925-433F-87D0-A450D887361D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3785CBAF-5925-433F-87D0-A450D887361D}.Debug|x86.Build.0 = Debug|Any CPU
+		{3785CBAF-5925-433F-87D0-A450D887361D}.Release|x86.ActiveCfg = Release|Any CPU
+		{3785CBAF-5925-433F-87D0-A450D887361D}.Release|x86.Build.0 = Release|Any CPU
+		{5583B166-1F75-4A3B-9275-07C3CED5E836}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5583B166-1F75-4A3B-9275-07C3CED5E836}.Debug|x86.Build.0 = Debug|Any CPU
+		{5583B166-1F75-4A3B-9275-07C3CED5E836}.Release|x86.ActiveCfg = Release|Any CPU
+		{5583B166-1F75-4A3B-9275-07C3CED5E836}.Release|x86.Build.0 = Release|Any CPU
+		{398C673D-9F9C-42DB-899A-86C38DA1235F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{398C673D-9F9C-42DB-899A-86C38DA1235F}.Debug|x86.Build.0 = Debug|Any CPU
+		{398C673D-9F9C-42DB-899A-86C38DA1235F}.Release|x86.ActiveCfg = Release|Any CPU
+		{398C673D-9F9C-42DB-899A-86C38DA1235F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
