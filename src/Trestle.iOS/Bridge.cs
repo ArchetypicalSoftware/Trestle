@@ -5,8 +5,17 @@ namespace Archetypical.Software.Trestle
 {
     public class Bridge : ITrestle
     {
+        public void AddUrlOverride(string url, Func<string> action)
+        {
+            throw new NotImplementedException();
+        }
 
         public string Send(string payload)
+        {
+            throw new NotImplementedException("It kinda worked");
+        }
+
+        public T WireWebView<T>()
         {
             throw new NotImplementedException();
         }

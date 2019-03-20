@@ -20,7 +20,7 @@ namespace Archetypical.Software.Trestle
             }
         }
 
-        static ITrestle CreateBridge()
+        internal static ITrestle CreateBridge()
         {
 #if PORTABLE
             return null;

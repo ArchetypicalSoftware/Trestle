@@ -3,51 +3,51 @@
    <metadata minClientVersion="2.8.1">
        <id>Archetypical.Software.Trestle</id>
        <version>1.0.0</version>
-       <title>Plugin for Xamarin and Windows</title>
+       <title>Plugin for Xamarin</title>
        <authors>Vito Vargas</authors>
        <owners>Archetypical Software</owners>
-       <!--licenseUrl>https://github.com/jamesmontemagno/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl-->
-       <!--projectUrl>https://github.com/jamesmontemagno/Xamarin.Plugins/Vibrate</projectUrl-->
-       <!--iconUrl>http://refractored.com/images/vibrate_icon_large.png</iconUrl-->
+       <!--licenseUrl></licenseUrl-->
+       <!--projectUrl></projectUrl-->
+       <!--iconUrl></iconUrl-->
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
          Xamarin and Windows plugin
        </description>
        <summary>
-         Xamarin and Windows plugin to vibrate your device.
+         Xamarin and Windows plugin.
        </summary>
-       <tags>xamarin, xamarin.forms, android, ios, windows phone, vibrate</tags>
+       <tags>xamarin, xamarin.forms, android, ios</tags>
    </metadata>
    <files>
      <!--Core-->
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.dll" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.dll" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.xml" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.xml" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.pdb" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.pdb" />
-     <file src="Trestle\bin\Release\Archetypical.Software.Trestle.dll" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.dll" />
-     <file src="Trestle\bin\Release\Archetypical.Software.Trestle.xml" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.xml" />
-     <file src="Trestle\bin\Release\Archetypical.Software.Trestle.pdb" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.pdb" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.dll" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.deps.json" target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.deps.json" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.pdb" />
+     <file src="Trestle\bin\Release\netstandard2.0\Archetypical.Software.Trestle.dll"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.dll" />
+     <file src="Trestle\bin\Release\netstandard2.0\Archetypical.Software.Trestle.deps.json" target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.deps.json" />
+     <file src="Trestle\bin\Release\netstandard2.0\Archetypical.Software.Trestle.pdb"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.pdb" />
  
      <!--Xamarin.Android-->
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.dll" target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.dll" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.xml" target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.xml" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.pdb" target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.pdb" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll"  target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.dll" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.deps.json" target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.deps.json" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb"  target="lib\MonoAndroid10\Archetypical.Software.Trestle.Abstractions.pdb" />
      <file src="Trestle.Android\bin\Release\Archetypical.Software.Trestle.dll" target="lib\MonoAndroid10\Archetypical.Software.Trestle.dll" />
-     <file src="Trestle.Android\bin\Release\Archetypical.Software.Trestle.xml" target="lib\MonoAndroid10\Archetypical.Software.Trestle.xml" />
      <file src="Trestle.Android\bin\Release\Archetypical.Software.Trestle.pdb" target="lib\MonoAndroid10\Archetypical.Software.Trestle.pdb" />
  
      <!--Xamarin.iOS-->
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.dll" target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.dll" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.xml" target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.xml" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.pdb" target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.pdb" />
-     <file src="Trestle.iOS\bin\iPhone\Release\Archetypical.Software.Trestle.dll" target="lib\MonoTouch10\Archetypical.Software.Trestle.dll" />
-     <file src="Trestle.iOS\bin\iPhone\Release\Archetypical.Software.Trestle.xml" target="lib\MonoTouch10\Archetypical.Software.Trestle.xml" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll"  target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.dll" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.deps.json" target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.deps.json" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb"  target="lib\MonoTouch10\Archetypical.Software.Trestle.Abstractions.pdb" />
+     <file src="Trestle.iOS\bin\Release\Archetypical.Software.Trestle.dll" target="lib\MonoTouch10\Archetypical.Software.Trestle.dll" />
+     <!--<file src="Trestle.iOS\bin\Release\Archetypical.Software.Trestle.dll.mdb" target="lib\MonoTouch10\Archetypical.Software.Trestle.dll.mdb" />-->
+     <file src="Trestle.iOS\bin\Release\Archetypical.Software.Trestle.pdb" target="lib\MonoTouch10\Archetypical.Software.Trestle.pdb" />
  
      <!--Xamarin.iOS Unified-->
-     <!--file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.dll" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.dll" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.xml" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.xml" />
-     <file src="Trestle.Abstractions\bin\Release\Archetypical.Software.Trestle.Abstractions.pdb" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Archetypical.Software.Trestle.Abstractions.pdb" />
+     <!--<file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.dll" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.deps" target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.deps" />
+     <file src="Trestle.Abstractions\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb"  target="lib\netstandard2.0+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Archetypical.Software.Trestle.Abstractions.pdb" />
      <file src="Trestle.iOSUnified\bin\iPhone\Release\Archetypical.Software.Trestle.dll" target="lib\Xamarin.iOS10\Archetypical.Software.Trestle.dll" />
-     <file src="Trestle.iOSUnified\bin\iPhone\Release\Archetypical.Software.Trestle.xml" target="lib\Xamarin.iOS10\Archetypical.Software.Trestle.xml" /-->
+     <file src="Trestle.iOSUnified\bin\iPhone\Release\Archetypical.Software.Trestle.xml" target="lib\Xamarin.iOS10\Archetypical.Software.Trestle.xml" />--> 
      
    </files>
 </package>

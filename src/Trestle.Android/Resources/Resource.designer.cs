@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Archetypical.Software.Trestle.Android.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Archetypical.Software.Trestle.Resource", IsApplication=false)]
 
-namespace Archetypical.Software.Trestle.Android
+namespace Archetypical.Software.Trestle
 {
 	
 	
