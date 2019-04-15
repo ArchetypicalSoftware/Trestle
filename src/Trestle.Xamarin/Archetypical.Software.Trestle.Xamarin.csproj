@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj" />
-    <ProjectReference Include="..\..\Trestle\Archetypical.Software.Trestle.csproj" />
+    <ProjectReference Include="..\Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj" />
+    <ProjectReference Include="..\Trestle\Archetypical.Software.Trestle.csproj" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Xamarin
+namespace Archetypical.Software.Trestle.Xamarin
 {
     public interface IXamTrestle
     {

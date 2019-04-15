@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Xamarin
+namespace Archetypical.Software.Trestle.Xamarin
 {
     public class TrestleWebView : WebView, IXamTrestle
     {
