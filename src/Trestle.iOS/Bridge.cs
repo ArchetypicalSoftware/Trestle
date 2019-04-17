@@ -15,7 +15,7 @@ namespace Archetypical.Software.Trestle
             throw new NotImplementedException("It kinda worked");
         }
 
-        public T WireWebView<T>()
+        public void WireWebView<T>(T webView)
         {
             throw new NotImplementedException();
         }

@@ -1,20 +1,14 @@
-﻿using Archetypical.Software.Trestle;
-using Archetypical.Software.Trestle.Abstractions;
+﻿using Archetypical.Software.Trestle.Abstractions;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Archetypical.Software.Trestle.Xamarin
 {
-    public class TrestleWebView : WebView, IXamTrestle
+    public class TrestleWebView : WebView, ITrestle
     {
-        private List<string> urlOverrides;
         private ITrestle _trestle;
 
         public TrestleWebView() {
-            urlOverrides = new List<string>();
             _trestle = CrossTrestle.Current;
         }
 
@@ -23,28 +17,14 @@ namespace Archetypical.Software.Trestle.Xamarin
             _trestle.AddUrlOverride(url, action);
         }
 
-        public async Task AddServiceWorker(string javaScript)
+        public string Send(string payload)
         {
-            await this.EvaluateJavaScriptAsync(javaScript);
+            return _trestle.Send(payload);
         }
 
-        public async Task AddServiceWorker()
+        public void WireWebView<T>(T webView)
         {
-            var otherJS = "get this from somewhere else";
-            await this.EvaluateJavaScriptAsync(otherJS);
-        }
-
-        void IXamTrestle.AddServiceWorker(string javaScript)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public static class TrestleHelper
-    {
-        public static void AddServiceWorker(this WebView webView, string javaScript)
-        {
-
+            _trestle.WireWebView<T>(webView);
         }
     }
 }

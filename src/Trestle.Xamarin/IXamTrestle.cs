@@ -1,9 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using System;
 
 namespace Archetypical.Software.Trestle.Xamarin
 {
     public interface IXamTrestle
     {
-        void AddServiceWorker(string javaScript);
+        void AddUrlOverride(string url, Func<string> action);
     }
 }

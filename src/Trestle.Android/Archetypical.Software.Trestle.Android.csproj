@@ -62,6 +62,7 @@
     <ProjectReference Include="..\Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj">
       <Project>{398C673D-9F9C-42DB-899A-86C38DA1235F}</Project>
       <Name>Archetypical.Software.Trestle.Abstractions</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

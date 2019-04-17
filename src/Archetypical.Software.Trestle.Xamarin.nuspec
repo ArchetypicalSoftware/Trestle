@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+   <metadata minClientVersion="2.8.1">
+       <id>Archetypical.Software.Trestle.Xamarin</id>
+       <version>1.0.0</version>
+       <title>Plugin for Xamarin Forms</title>
+       <authors>Vito Vargas</authors>
+       <owners>Archetypical Software</owners>
+       <!--licenseUrl></licenseUrl-->
+       <!--projectUrl></projectUrl-->
+       <!--iconUrl></iconUrl-->
+       <requireLicenseAcceptance>false</requireLicenseAcceptance>
+       <description>
+         Xamarin and Windows plugin
+       </description>
+       <summary>
+         Xamarin and Windows plugin.
+       </summary>
+       <tags>xamarin, xamarin.forms, android, ios</tags>
+   </metadata>
+   <files>
+     
+     <!-- Xamarin -->
+     <file src="Trestle.Xamarin\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll" target="lib\netstandard2.0\Archetypical.Software.Trestle.Abstractions.dll" />
+     <file src="Trestle.Xamarin\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb" target="lib\netstandard2.0\Archetypical.Software.Trestle.Abstractions.pdb" />
+     <file src="Trestle.Xamarin\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Xamarin.dll" target="lib\netstandard2.0\Archetypical.Software.Trestle.Xamarin.dll" />
+     <file src="Trestle.Xamarin\bin\Release\netstandard2.0\Archetypical.Software.Trestle.Xamarin.pdb" target="lib\netstandard2.0\Archetypical.Software.Trestle.Xamarin.pdb" />
+     
+   </files>
+</package>

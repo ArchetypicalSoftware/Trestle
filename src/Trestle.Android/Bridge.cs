@@ -1,28 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Android.App;
-using Android.Content;
-using Android.OS;
+using System.Text;
 using Android.Runtime;
-using Android.Util;
 using Android.Webkit;
 using Archetypical.Software.Trestle.Abstractions;
-using Java.Lang;
 
 namespace Archetypical.Software.Trestle
 {
     public class Bridge :  ITrestle
     {
-        private Context _context;
         private WebView _webView;
         private BridgeWebViewClient _webViewClient;
 
         #region constructors
         public Bridge()
         {
-            _webViewClient = new BridgeWebViewClient();
-            _webView.SetWebViewClient(_webViewClient);
         }
         #endregion
 
@@ -33,19 +26,22 @@ namespace Archetypical.Software.Trestle
 
         public void AddUrlOverride(string url, Func<string> action)
         {
-            if (typeof(WebViewClient) != typeof(BridgeWebViewClient))
+            if (_webView == null || _webViewClient == null)
             {
-                _webViewClient = new BridgeWebViewClient();
-                _webView.SetWebViewClient(_webViewClient);
+                throw new Exception("WebView and WebViewClient were not initialized");
             }
 
             _webViewClient.AddOverrideUrl(url, action);
         }
 
-
-        public T WireWebView<T>()
+        public void WireWebView<T>(T webView)
         {
-            throw new System.NotImplementedException();
+            if (webView.GetType() == typeof(WebView))
+            {
+                _webView = webView as WebView;
+                _webViewClient = new BridgeWebViewClient();
+                _webView.SetWebViewClient(_webViewClient);
+            }
         }
     }
 
@@ -69,18 +65,34 @@ namespace Archetypical.Software.Trestle
         public override WebResourceResponse ShouldInterceptRequest(WebView view, IWebResourceRequest request)
         {
             WebResourceResponse webResourceResponse = null;
-            if (_urls.Contains(request.Url.Path))
+            var urlToCheck = $"{request.Url.Scheme}:{request.Url.SchemeSpecificPart}";
+            if (_urls.Contains(urlToCheck))
             {
-                var action = _urlActions[request.Url.Path];
+                var action = _urlActions[urlToCheck];
                 var response = action.Invoke();
-                using (var stream = Helpers.GenerateStreamFromString(response))
-                {
-                    webResourceResponse = new WebResourceResponse(request.RequestHeaders["mimeType"], request.RequestHeaders["encoding"], stream);
-                }
-            }
+                var stream = new MemoryStream();
+                
+                var sw = new StreamWriter(stream);
+                
+                sw.WriteLine(response);
+                stream.Position = 0;
 
-            if (webResourceResponse != null)
+                webResourceResponse = new WebResourceResponse(
+                    request.RequestHeaders.ContainsKey("mimeType") ? request.RequestHeaders["mimeType"] : "application/json", 
+                    request.RequestHeaders.ContainsKey("encoding") ? request.RequestHeaders["encoding"] : "UTF-8",
+                    200,"OK",request.RequestHeaders,
+                    stream);
+
+                //  Uncomment the code below to see what is in web resource response data
+                //var blah = new MemoryStream();
+                //webResourceResponse.Data.CopyTo(blah);
+                //blah.Position = 0;
+
+                //var sr = new StreamReader(blah);
+                //var test = sr.ReadToEnd();
+
                 return webResourceResponse;
+            }
 
             return base.ShouldInterceptRequest(view, request);
         }
@@ -96,11 +108,12 @@ namespace Archetypical.Software.Trestle
     {
         public static Stream GenerateStreamFromString(string s)
         {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
+            byte[] byteArray = Encoding.ASCII.GetBytes(s);
+            var stream = new MemoryStream(byteArray);
+            //var writer = new StreamWriter(stream);
+            //writer.Write(s);
+            //writer.Flush();
+            //stream.Position = 0;
             return stream;
         }
     }

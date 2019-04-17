@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archetypical.Software.Trestle", "Trestle\Archetypical.Software.Trestle.csproj", "{B8F94115-113E-42C1-BEB7-72B26574BD0D}"
 EndProject
@@ -11,11 +11,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{4DE759B6-01FC-42CF-B4AD-24B3B6CB9FA0}"
 	ProjectSection(SolutionItems) = preProject
 		Archetypical.Software.Trestle.nuspec = Archetypical.Software.Trestle.nuspec
+		Archetypical.Software.Trestle.Xamarin.nuspec = Archetypical.Software.Trestle.Xamarin.nuspec
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archetypical.Software.Trestle.Abstractions", "Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj", "{398C673D-9F9C-42DB-899A-86C38DA1235F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archetypical.Software.Trestle.Xamarin", "Trestle.Xamarin\Archetypical.Software.Trestle.Xamarin.csproj", "{73936D04-8186-4B72-B05C-ABF7AD920328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archetypical.Software.Trestle.Xamarin", "Trestle.Xamarin\Archetypical.Software.Trestle.Xamarin.csproj", "{73936D04-8186-4B72-B05C-ABF7AD920328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

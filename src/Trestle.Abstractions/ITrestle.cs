@@ -6,10 +6,8 @@ namespace Archetypical.Software.Trestle.Abstractions
     {
         string Send(string payload);
 
-        T WireWebView<T>();
+        void WireWebView<T>(T webView);
 
         void AddUrlOverride(string url, Func<string> action);
     }
-
-    //public interface IPlatformElementConfiguration<out TPlatform, out TElement> : Xamarin.Forms.IConfigElement<out TElement> where TPlatform : IConfigPlatform where TElement : Element
 }
