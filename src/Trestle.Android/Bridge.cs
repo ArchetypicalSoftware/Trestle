@@ -48,16 +48,18 @@ namespace Archetypical.Software.Trestle
                 _webView.ClearCache(true);
                 _webView.Settings.JavaScriptEnabled = true;
                 _webView.Settings.DomStorageEnabled = true;
+                _webView.LayoutParameters = new LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent);
 
                 _webViewClient = new BridgeWebViewClient();
-
                 _webView.SetBackgroundColor(Android.Graphics.Color.Pink);
-                _view.AddView(_webView, new LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent));
+                _view.AddView(_webView);
                 _webView.SetWebViewClient(_webViewClient);
 
                 var button = new Button(_view.Context);
                 button.Text = "My Dynamic Button";
                 button.SetBackgroundColor(Android.Graphics.Color.Brown);
+                button.LayoutParameters = new LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+                _view.AddView(button);
             }
         }
 

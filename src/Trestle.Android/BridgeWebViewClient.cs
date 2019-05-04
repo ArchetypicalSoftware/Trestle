@@ -28,7 +28,6 @@ namespace Archetypical.Software.Trestle
             var urlToCheck = $"{request.Url.Scheme}:{request.Url.SchemeSpecificPart}";
             if (!_urls.Contains(urlToCheck))
                 return base.ShouldInterceptRequest(view, request);
-
             try
             {
                 var action = _urlActions[urlToCheck];
@@ -41,12 +40,12 @@ namespace Archetypical.Software.Trestle
                     var content = response.Content.ReadAsStreamAsync().Result;
                     var contentType = "*/*";
                     var headers = new Dictionary<string, string>();
-                    headers.Add("Access-Control-Allow-Origin", "*"); // SUPER FLIPIN' IMPORTANT!
+                    headers.Add("Access-Control-Allow-Origin", "*");
 
                     return new WebResourceResponse(contentType, "UTF-8", 200, "OK", headers, content);
                 }
             }
-            catch (AggregateException e)
+            catch (AggregateException)
             {
                 return base.ShouldInterceptRequest(view, request);
             }

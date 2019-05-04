@@ -5,9 +5,8 @@ using Xamarin.Forms;
 
 namespace Archetypical.Software.Trestle.Xamarin
 {
-    public class TrestleWrapper : StackLayout//Layout<View>
+    public class TrestleWrapper : StackLayout
     {
-        //private TrestleWebView _webView;
         Dictionary<Size, LayoutData> layoutDataCache = new Dictionary<Size, LayoutData>();
 
         public TrestleWrapper()
