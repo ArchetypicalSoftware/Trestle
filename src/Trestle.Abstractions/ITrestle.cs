@@ -9,5 +9,9 @@ namespace Archetypical.Software.Trestle.Abstractions
         void WireWebView<T>(T webView);
 
         void AddUrlOverride(string url, Func<string> action);
+
+        void LoadHtmlString(string html);
+
+        void SetUrl(string url);
     }
 }

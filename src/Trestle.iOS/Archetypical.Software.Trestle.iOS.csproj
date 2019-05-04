@@ -60,6 +60,8 @@
     <Compile Include="..\Trestle\CrossTrestle.cs">
       <Link>CrossTrestle.cs</Link>
     </Compile>
+    <Compile Include="TrestleSchemeHandler.cs" />
+    <Compile Include="TrestleNavigationDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Trestle.Abstractions\Archetypical.Software.Trestle.Abstractions.csproj">

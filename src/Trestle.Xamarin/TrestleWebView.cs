@@ -17,6 +17,16 @@ namespace Archetypical.Software.Trestle.Xamarin
             _trestle.AddUrlOverride(url, action);
         }
 
+        public void LoadHtmlString(string html)
+        {
+            _trestle.LoadHtmlString(html);
+        }
+
+        public void SetUrl(string url)
+        {
+            _trestle.SetUrl(url); 
+        }
+
         public string Send(string payload)
         {
             return _trestle.Send(payload);
